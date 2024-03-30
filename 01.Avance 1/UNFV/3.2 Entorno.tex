@@ -1,0 +1,131 @@
+\begin{columns}
+    \begin{column}{0.47\textwidth}
+        \begin{itemize}
+            \item Analizamos la función $f(x,y)$ en $\color{blue}P(x_{0},y_{0})=P(0.63;0)$, y obtenemos:
+                    \\
+                    $\color{blue}f(x_{0},y_{0})=-0.47247$
+            \item Analizamos la función $f(x,y)$ en $P_{1,2}(x_{0}-0.1,y_{0} \pm 0.1)=P_{1,2}(0.53; \pm 0.1)$, y obtenemos:
+                    \\
+                    $f(x_{0}-0.1,y_{0} \pm 0.1)=-0.45$
+            \item De lo analizado podemos observar que $P$ es un punto más bajo que $P_{1,2}$, podemos afirmar parcialmente que $P$ es punto mínimo de la función $f$.
+        \end{itemize}
+    \end{column}
+    \begin{column}{0.47\textwidth}
+        Analizamos en el plano $x=x_{0}$:
+        \begin{tikzpicture}[samples=50]
+            \begin{axis}[
+                samples=30,axis lines=middle, axis on top, 
+                view={60}{45},  
+                xmin=-1,
+                xmax=1,
+                ymin=-1,
+                ymax=1,       
+                miter limit=1,scale=0.75]
+                
+                \addplot3[ smooth,     
+                    surf,
+                    faceted color=gray,
+                    line width=0.0001pt, 
+                    fill=white, 
+                    domain=-1:0.62996,
+                    y domain = -1:1,
+                    samples = 20,
+                    samples y = 20]
+                    {H(\x,\y)};
+                    
+                \addplot3[y domain=-1:1,
+                    samples y = 50, samples= 0, red, thick] 
+                    ({0.62996},{y},{H(0.62996,y)});
+                    
+                \addplot3[y domain=-.1:.1,
+                    samples y = 10, samples= 0, blue, thick] 
+                    ({0.52996},{y},{H(0.52996,y)});
+                \addplot3[domain=0.52996:0.62996,
+                    samples = 10, samples y = 0, blue, thick] 
+                    ({x},{0.1},{H(x,0.1)});  
+                    
+                \addplot3[domain=0.52996:0.62996,
+                    samples = 10, samples y = 0, blue, thick] 
+                    ({x},{-0.1},{H(x,-0.1)});  
+                
+            \end{axis}
+            
+        \end{tikzpicture} 
+    \end{column}
+    
+\end{columns}
+
+\framebreak
+
+\begin{columns}
+    \begin{column}{0.47\textwidth}
+        Analizamos en el plano $y=y_{0}$:
+        \begin{tikzpicture}[samples=50]
+            \begin{axis}[
+                samples=30,axis lines=middle, axis on top, 
+                view={310}{50},  
+                xmin=-0.4,
+                xmax=1.6,
+                ymin=-1,
+                ymax=1,       
+                miter limit=1,scale=0.75]
+                
+                \addplot3[ smooth,     
+                    surf,
+                    faceted color=gray,
+                    line width=0.0001pt, 
+                    fill=white, 
+                    domain=-0.4:0.62996,
+                    y domain = 0:1,
+                    samples = 10,
+                    samples y = 10]
+                    {H(\x,\y)};
+                \addplot3[ smooth,     
+                    surf,
+                    faceted color=gray,
+                    line width=0.0001pt, 
+                    fill=white, 
+                    domain=0.62996:1.5,
+                    y domain = -1:1,
+                    samples = 10,
+                    samples y = 19]
+                    {H(\x,\y)};
+                    
+                \addplot3[domain=-0.4:1.5,
+                    samples y = 0, samples= 50, red, thick] 
+                    ({x},{0},{H(x,0)});
+                    
+                \addplot3[y domain=-.1:.1,
+                    samples y = 10, samples= 0, blue, thick] 
+                    ({0.72996},{y},{H(0.72996,y)});
+                \addplot3[y domain=0:.1,
+                    samples y = 10, samples= 0, blue, thick] 
+                    ({0.52996},{y},{H(0.52996,y)});
+                \addplot3[domain=0.52996:0.72996,
+                    samples = 10, samples y = 0, blue, thick] 
+                    ({x},{0.1},{H(x,0.1)});  
+                    
+                \addplot3[domain=0.62996:0.72996,
+                    samples = 10, samples y = 0, blue, thick] 
+                    ({x},{-0.1},{H(x,-0.1)});  
+                
+            \end{axis}
+            
+        \end{tikzpicture} 
+    \end{column}
+    \begin{column}{0.47\textwidth}
+        \begin{itemize}
+            \item Recordando que el punto $\color{blue}P(x_{0},y_{0})=P(0.63;0)$ en la función $f(x,y)$ toma el valor de:
+                    \\
+                    $\color{blue}f(x_{0},y_{0})=-0.47247$
+            \item Analizamos la función $f(x,y)$ en $P_{3,4}(x_{0}+0.1,y_{0} \pm 0.1)=P_{3,4}(0.73; \pm 0.1)$, y obtenemos:
+                    \\
+                    $f(x_{0}+0.1,y_{0} \pm 0.1)=-0.446$
+            \item De lo analizado podemos observar que $P$ es un punto más bajo que $P_{1,2,3,4}$, podemos afirmar que $P$ es punto mínimo de la función $f$.
+        \end{itemize}
+    \end{column}
+\end{columns}
+
+
+    
+

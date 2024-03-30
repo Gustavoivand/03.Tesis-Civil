@@ -1,0 +1,77 @@
+\begin{columns}
+            \begin{column}{0.47\textwidth}
+                \justify
+                \textbf{Criterio de la segunda derivada:}  
+                \\Sea $z=f(x,y)$ una función definida en un espacio $D \subset R^{2}$ y $P(x_{0},y_{0}) \in D$. Supongamos que $f$ tiene derivadas parciales de primer y segundo orden continuas en $D$ y que $P(x_{0},y_{0})$ es un punto crítico de $f$, es decir $f_{x}(x_{0},y_{0})=0$ y $f_{y}(x_{0},y_{0})=0$, entonces se verifica que:
+                \begin{enumerate}
+                    \item $f$ tiene un punto máximo en $P(x_{0},y_{0})$ si:
+                    \\
+                    \scalebox{0.65}{%
+                    $f_{xx}(x_{0},y_{0})<0$ y $\begin{vmatrix}
+                     f_{xx}(x_{0},y_{0}) & f_{xy}(x_{0},y_{0})\\
+                     f_{xy}(x_{0},y_{0}) & f_{yy}(x_{0},y_{0})
+                    \end{vmatrix}>0$}
+                    \setcounter{nameOfYourChoice}{\value{enumi}}
+                \end{enumerate}
+            \end{column}
+            \begin{column}{0.47\textwidth}
+                \begin{enumerate}
+                    \setlength\itemsep{1em}
+                    
+                    \setcounter{enumi}{\value{nameOfYourChoice}}
+                    \item $f$ tiene un punto mínimo en $P(x_{0},y_{0})$ si:
+                    \\
+                    \scalebox{0.65}{%
+                    $f_{xx}(x_{0},y_{0})>0$ y $\begin{vmatrix}
+                     f_{xx}(x_{0},y_{0}) & f_{xy}(x_{0},y_{0})\\
+                     f_{xy}(x_{0},y_{0}) & f_{yy}(x_{0},y_{0})
+                    \end{vmatrix}>0$}
+                    
+                    \item $f$ no tiene ni máximo ni mínimo en $P(x_{0},y_{0})$, es decir presente un punto silla sí:
+                    \\
+                    \centering{
+                    \scalebox{0.65}{%
+                    $\begin{vmatrix}
+                     f_{xx}(x_{0},y_{0}) & f_{xy}(x_{0},y_{0})\\
+                     f_{xy}(x_{0},y_{0}) & f_{yy}(x_{0},y_{0})
+                    \end{vmatrix}<0$}}
+                    
+                    \item No podremos asegurar que $f$ tiene máximo ni mínimo si:
+                    \\
+                    \scalebox{0.65}{%
+                     $\begin{vmatrix}
+                     f_{xx}(x_{0},y_{0}) & f_{xy}(x_{0},y_{0})\\
+                     f_{xy}(x_{0},y_{0}) & f_{yy}(x_{0},y_{0})
+                    \end{vmatrix}=0$}
+                \end{enumerate}
+            \end{column}
+\end{columns}       
+
+\framebreak
+
+\begin{columns}
+    \begin{column}{0.47\textwidth}
+                \justify
+                Como vimos anteriormente, para calcular los máximos y mínimos de la ecuación $f(x,y)$ debemos calcular las segundas derivadas $f_{xx}(x,y)$, $f_{xy}(x,y)$ y $f_{yy}(x,y)$, y evaluarlas en el punto crítico $P(x_{0},y_{0})=P(0.63;0)$ para poder ubicar al punto crítico dentro de uno de los 4 casos enumerados, para tal fin procedemos a hallar las derivadas en cuestión:
+                \begin{itemize}
+
+                    \item $f_{xx}(x,y)=12x^{2}$, entonces
+                    \\$f_{xx}(x_{0},y_{0})=4.76$
+                \end{itemize}
+                    
+            \end{column}
+            \begin{column}{0.47\textwidth}
+                \begin{itemize}
+                    \setlength\itemsep{1em}
+                    \item $f_{xy}(x,y)=0$, entonces
+                    \\$f_{xy}(x_{0},y_{0})=0$
+                    
+                    \item $f_{yy}(x,y)=12y^{2}$, entonces
+                    \\$f_{yy}(x_{0},y_{0})=0$
+                    \item Donde obtenemos que $f_{xx}(x_{0},y_{0})>0$, pero $\begin{vmatrix}
+                     f_{xx}(x_{0},y_{0}) & f_{xy}(x_{0},y_{0})\\
+                     f_{xy}(x_{0},y_{0}) & f_{yy}(x_{0},y_{0})
+                    \end{vmatrix}=0$, por lo tanto, el punto podría ser un mínimo, pero el criterio del Hessiano no es concluyente.
+            \end{itemize}
+         \end{column}
+\end{columns}

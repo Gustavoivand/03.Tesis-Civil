@@ -1,0 +1,64 @@
+\section{Problema 3}
+\begin{frame}{Contenido}
+        \tableofcontents[sections={3}]
+\end{frame}
+\subsection{Presentación del problema}
+    \begin{frame}{Presentación del problema}
+        \begin{columns}
+            \begin{column}{0.47\textwidth}
+                Para la siguiente función:
+                \[f(x,y)=x^{4}+y^{4}-x\]
+    
+            \begin{tikzpicture}
+                \begin{axis}[
+                samples=30,scale=0.75,hide axis]
+                    \addplot3[surf, shader=interp]{H(\x,\y)};
+                \end{axis}       
+            \end{tikzpicture}
+                
+            \end{column}
+            \begin{column}{0.47\textwidth}
+                \justify
+                Se pide:
+                \begin{itemize}
+                    \item Calcular el mínimo o mínimos de la función $f(x,y)$ de manera analítica.
+                    \item Presentar y discutir el método numérico de newton para optimización y aplicarlo para encontrar los mínimos de $f(x,y)$
+                    \item presentar y discutir un algoritmo genético para maximizar o minimizar funciones. Puede presentar su aplicación para el caso de una función de una variable.
+                \end{itemize}
+            \end{column}
+        \end{columns}
+                 
+    \end{frame}
+\subsection{Cálculo analítico de máximos y mínimos}
+    \begin{frame}{Existencia de puntos críticos}
+        \begin{columns}
+            \begin{column}{0.47\textwidth}
+                \justify
+                \textbf{Cálculo de puntos máximos o mínimos de una función de dos variables.-}  Si buscamos los extremos relativos de una función hay que analizar los puntos donde las derivadas parciales valen cero o no existen. Dichos puntos se llaman puntos críticos o estacionarios de f.\footnotemark
+            \end{column}
+            \begin{column}{0.47\textwidth}
+                Por lo tanto, hacemos:
+                \[\frac{\partial f(x,y)}{\partial x}=f_{x}(x,y)=4x^{3}-1=0\]
+                y:
+                \[\frac{\partial f(x,y)}{\partial y}=f_{y}(x,y)=4y^{3}=0\]
+                de donde obtenemos el punto crítico  $P(x_{0},y_{0})$ :
+                \[x_{0}=\frac{\sqrt[3]{2}}{2} \approx 0.62996; 
+                y_{0}=0\]
+            \end{column}
+        \end{columns}
+        \footcitetext{Upm17}
+    \end{frame}
+    \begin{frame}[fragile,allowframebreaks]{Condiciones suficientes para la existencia de extremos relativos}
+        \input{3.1 Suficiencia}        
+    \end{frame}
+    \begin{frame}[fragile,allowframebreaks]{Análisis del entorno}
+        \input{3.2 Entorno}
+    \end{frame}
+\subsection{Resolución por el ``Método de Newton''}
+\begin{frame}[fragile,allowframebreaks]{Método de Newton}
+    \input{3.3 Newton}
+\end{frame}
+\subsection{Resolución por ``algoritmo genético''}
+\begin{frame}[fragile,allowframebreaks]{Resolución por algoritmos genéticos}
+    \input{3.4 Algoritmo}
+\end{frame}

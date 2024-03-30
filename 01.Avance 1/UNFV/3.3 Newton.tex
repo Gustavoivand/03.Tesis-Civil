@@ -1,0 +1,173 @@
+\justify
+Para aproximarnos a un punto mínimo en la función $f$ a través del método de Newton asumimos un valor donde esperamos que exista un punto mínimo, por ejemplo para nuestro caso usaremos el punto $K(x_{k},y_{k})=(0.5,0.5)$ entonces calculamos un punto más próximo al mínimo esperado al que llamaremos $K+1$, con la siguiente expresión:
+\[X_{K+1}=X_{K}-H^{-1}_{f}(X_{K}) * \nabla f(X_{K}) \]
+\flushleft
+donde:
+\begin{itemize}
+    \item $X_{K}$: es el punto $K$ expresado vectorialmente, es decir, en nuestro caso $X_{K}=\begin{bmatrix}
+        x_{k} \\
+        y_{k}
+    \end{bmatrix}=
+    \begin{bmatrix}
+        0.5 \\
+        0.5
+    \end{bmatrix}$.
+    \item $H^{-1}_{f}(X_{K})$: es  la inversa del Hessiano de la función $f$ evaluada en el punto $K$.
+    \item $\nabla f(X_{K})$: es la gradiente de la función $f$ evaluada en el punto $K$.
+\end{itemize}
+
+\framebreak
+
+cómo vimos anteriormente el hessiano de la funcion $f$, está definido por:
+\[H_{f}=\begin{bmatrix}
+  f_{xx}(x,y) & f_{xy}(x,y)\\
+ f_{xy}(x,y) & f_{yy}(x,y)
+\end{bmatrix}=
+\begin{bmatrix}
+  12x^{2} & 0\\
+ 0 & 12y^{2}
+\end{bmatrix}\]
+y la gradiente no es mas qué:
+\[\nabla f(X) = \begin{bmatrix}
+    f_{x}(x,y)\\
+    f_{y}(x,y)
+\end{bmatrix}
+=\begin{bmatrix}
+    4x^{3}-1\\
+    4y^{3}
+\end{bmatrix}\]
+Es decir calcularemos, para nuestro caso particular:
+\[X_{K+1}=\begin{bmatrix}
+        x_{k} \\
+        y_{k}
+    \end{bmatrix}-\begin{bmatrix}
+  12x^{2} & 0\\
+ 0 & 12y^{2}
+\end{bmatrix}^{-1} * \begin{bmatrix}
+    4x^{3}-1\\
+    4y^{3}
+\end{bmatrix}\]
+
+\framebreak
+
+\begin{itemize}
+    \item Realizamos la {\color{blue}primeraa iteración} haciendo $
+    \begin{bmatrix}
+        x_{k} \\
+        y_{k}
+    \end{bmatrix}=
+    \begin{bmatrix}
+        0.5 \\
+        0.5
+    \end{bmatrix}$, de donde obtenemos:\\
+    \scalebox{0.75}{$X_{K+1}=\begin{bmatrix}
+        0.5 \\
+        0.5
+    \end{bmatrix}-\begin{bmatrix}
+  12(0.5)^{2} & 0\\
+ 0 & 12(0.5)^{2}
+\end{bmatrix}^{-1} * \begin{bmatrix}
+    4(0.5)^{3}-1\\
+    4(0.5)^{3}
+\end{bmatrix}=\begin{bmatrix}
+        0.6666\\
+        0.3333
+\end{bmatrix}
+$}
+\item Realizamos la {\color{blue}segunda iteración} haciendo $
+    \begin{bmatrix}
+        x_{k} \\
+        y_{k}
+    \end{bmatrix}=
+    \begin{bmatrix}
+        0.666 \\
+        0.333
+    \end{bmatrix}$, de donde obtenemos:\\
+    \scalebox{0.75}{$X_{K+1}=\begin{bmatrix}
+        0.666 \\
+        0.3333
+    \end{bmatrix}-\begin{bmatrix}
+  12(0.666)^{2} & 0\\
+ 0 & 12(0.333)^{2}
+\end{bmatrix}^{-1} * \begin{bmatrix}
+    4(0.666)^{3}-1\\
+    4(0.333)^{3}
+\end{bmatrix}=\begin{bmatrix}
+        0.6319\\
+        0.2222
+\end{bmatrix}
+$}
+\item Realizamos la {\color{blue}tercera iteración} haciendo $
+    \begin{bmatrix}
+        x_{k} \\
+        y_{k}
+    \end{bmatrix}=
+    \begin{bmatrix}
+        0.6319 \\
+        0.2222
+    \end{bmatrix}$, de donde obtenemos:\\
+    \scalebox{0.75}{$X_{K+1}=\begin{bmatrix}
+        0.6319 \\
+        0.2222
+    \end{bmatrix}-\begin{bmatrix}
+  12(0.6319)^{2} & 0\\
+ 0 & 12(0.2222)^{2}
+\end{bmatrix}^{-1} * \begin{bmatrix}
+    4(0.6319)^{3}-1\\
+    4(0.2222)^{3}
+\end{bmatrix}=\begin{bmatrix}
+        0.63\\
+        0.1481
+\end{bmatrix}
+$}
+\item Realizamos la {\color{blue}cuarta iteración} haciendo $
+    \begin{bmatrix}
+        x_{k} \\
+        y_{k}
+    \end{bmatrix}=
+    \begin{bmatrix}
+        0.63 \\
+        0.1481
+    \end{bmatrix}$, de donde obtenemos:\\
+    \scalebox{0.75}{$X_{K+1}=\begin{bmatrix}
+        0.63 \\
+        0.1481
+    \end{bmatrix}-\begin{bmatrix}
+  12(0.63)^{2} & 0\\
+ 0 & 12(0.1481)^{2}
+\end{bmatrix}^{-1} * \begin{bmatrix}
+    4(0.63)^{3}-1\\
+    4(0.1481)^{3}
+\end{bmatrix}=\begin{bmatrix}
+        0.63\\
+        0.0987
+\end{bmatrix}
+$}
+\item Realizamos la {\color{blue}quinta iteración} haciendo $
+    \begin{bmatrix}
+        x_{k} \\
+        y_{k}
+    \end{bmatrix}=
+    \begin{bmatrix}
+        0.63 \\
+        0.0987
+    \end{bmatrix}$, de donde obtenemos:\\
+    \scalebox{0.75}{$X_{K+1}=\begin{bmatrix}
+        0.63 \\
+        0.0987
+    \end{bmatrix}-\begin{bmatrix}
+  12(0.63)^{2} & 0\\
+ 0 & 12(0.0987)^{2}
+\end{bmatrix}^{-1} * \begin{bmatrix}
+    4(0.63)^{3}-1\\
+    4(0.0987)^{3}
+\end{bmatrix}={\color{red}\begin{bmatrix}
+        0.63\\
+        0.0658
+\end{bmatrix}
+}$}
+\end{itemize}
+Como hemos visto, el método lleva a la convergencia del punto inicial elegido hacia el punto crítico que calculamos analíticamente.
+
+\framebreak
+Finalmente, para saber si el punto encontrado es un máximo o un mínimo local, tenemos que evaluar $f_{xx}$, al igual que en el método analítico, si $f_{xx}<0$, entonces estamos hablando de un máximo local, si, por el contrario $f_{xx}>0$, entonces el punto analizado es un mínimo local.

@@ -1,0 +1,13 @@
+\babel@toc {spanish}{}\relax 
+\beamer@sectionintoc {1}{Introducción}{3}{0}{1}
+\beamer@sectionintoc {2}{Prefacio}{4}{0}{2}
+\beamer@sectionintoc {3}{Diseño y optimización de Ingeniería}{5}{0}{3}
+\beamer@subsectionintoc {3}{1}{Formulaciones básicas}{6}{0}{3}
+\beamer@subsectionintoc {3}{2}{Formulaciones de complejidad incrementada}{8}{0}{3}
+\beamer@sectionintoc {4}{Métodos de optimización tipo-gradiente}{12}{0}{4}
+\beamer@subsectionintoc {4}{1}{Optimización no restringida}{13}{0}{4}
+\beamer@subsectionintoc {4}{2}{Optimización en una dimensión}{14}{0}{4}
+\beamer@subsectionintoc {4}{3}{Métodos locales para optimización no restringida}{15}{0}{4}
+\beamer@subsectionintoc {4}{4}{Combinación de métodos}{16}{0}{4}
+\beamer@subsectionintoc {4}{5}{Optimización restringida}{18}{0}{4}
+\beamer@subsectionintoc {4}{6}{últimas observaciones sobre los métodos tipo gradiente}{21}{0}{4}

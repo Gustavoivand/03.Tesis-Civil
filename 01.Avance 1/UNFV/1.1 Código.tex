@@ -1,0 +1,72 @@
+Declaramos variables del programa y el error admisible:
+\begin{lstlisting}[language=Python]
+    #@title Variables iniciales:
+    import math
+    #Se pide la cantidad 
+    #de decimales admisibles
+    n1=5 #@param {type:"integer"}
+    #se calcula el error
+    err_admisible=10**(-n1)
+\end{lstlisting}
+\framebreak
+Declaramos las condiciones de extremo del problema y los límites entre los que buscará una respuesta:
+\begin{lstlisting}[language=Python]
+    x1=-1.5 #@param {type:"number"}
+    y1=2 #@param {type:"number"}
+    x2=1.5 #@param {type:"number"}
+    y2=3 #@param {type:"number"}
+    li=0.75 #@param {type:"number"}
+    lf=3 #@param {type:"number"}
+\end{lstlisting}
+\framebreak
+Se calcula los valores de y1 para el límite superior e inferior escogido de c1
+\begin{lstlisting}[language=Python]
+    c2i=li*math.acosh(y2/li)-x2
+    y1i=li*math.cosh((x1+c2i)/(li))
+    c2f=lf*math.acosh(y2/lf)-x2
+    y1f=lf*math.cosh((x1+lf)/(lf))
+\end{lstlisting}
+\framebreak
+
+Calculamos el valor intermedio de y1 considerando el valor medio de c1:
+\begin{lstlisting}[language=Python]    
+    c1a=(li+lf)/2
+    c2b=c1a*math.acosh(y2/c1a)-x2
+    y1b=c1a*math.cosh((x1+c2b)/(c1a))
+\end{lstlisting}
+\framebreak
+si el límite inicial es mayor que el límite final ejecutamos este código,
+\begin{lstlisting}[language=Python]         
+    if y1i>y1f:
+      while abs(y1-y1b)>err_admisible:
+        if y1b>y1:
+            li=c1a
+        else:
+            lf=c1a
+        c1a=(li+lf)/2
+        c2b=c1a*math.acosh(y2/c1a)-x2
+        y1b=c1a*math.cosh((x1+c2b)/(c1a))
+\end{lstlisting}
+el proceso termina cuando la diferencia de y1 y y1b es menor al error admisible\\
+\framebreak
+si el límite inicial es menor que el límite final ejecutamos este código
+\begin{lstlisting}[language=Python]             
+    else:
+      while abs(y1-y1b)>err_admisible:
+        if y1b>y1:
+            lf=c1a
+        else:
+            li=c1a
+        c1a=(li+lf)/2
+        c2b=c1a*math.acosh(y2/c1a)-x2
+        y1b=c1a*math.cosh((x1+c2b)/(c1a))
+\end{lstlisting}
+el proceso termina cuando la diferencia de y1 y y1b es menor al error admisible\\
+\framebreak
+se imprimen los resultados:
+\begin{lstlisting}[language=Python]   
+        print("y1a: ",y1a)
+        print("y2a: ",y2a)
+        print("C1a=", c1a)
+        print("C2b=",c2b)
+\end{lstlisting}
