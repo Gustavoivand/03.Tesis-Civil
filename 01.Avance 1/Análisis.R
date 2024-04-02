@@ -1,4 +1,4 @@
-setwd("F:/00.Doc.Generales/04.OneDrive/UNFV/OneDrive - Universidad Nacional Federico Villareal/0.UNFV/Tesis/Codigo/Prueba/")
+setwd("D:/03.Gits/03.Tesis Civil/01.Avance 1")
 #Leyendo los datos
 data<-read.csv("dataset.csv")
 str(data)
