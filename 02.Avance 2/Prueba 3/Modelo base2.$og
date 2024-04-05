@@ -1,0 +1,91 @@
+                                                                                
+                                                                                
+ B E G I N   A N A L Y S I S                                2024/04/05  08:50:50
+                                                                                
+                                                                                
+ E L E M E N T   F O R M A T I O N                                      08:50:50
+
+
++NUMBER OF JOINT  ELEMENTS FORMED          =           6                        
+
++NUMBER OF SPRING ELEMENTS FORMED          =           0                        
+                                                                                
++Frame  element       0 of       8                                              
++Frame  element       8 of       8                                              
++NUMBER OF FRAME  ELEMENTS FORMED          =           8                        
+                                                                                
++Weld       0 of       1                                                        
++Constraint       1 of       1                                                  
++NUMBER OF CONSTRAINTS FORMED              =           1                        
+                                                                                
+ REDUCTION OF CONSTRAINTS AND RESTRAINTS:                                       
+ NUMBER OF                                                                      
+   CONSTRAINT MASTER DOF BEFORE REDUCTION  =           3                        
+   COUPLED CONSTRAINT/RESTRAINT MASTER DOF =           0                        
+   CONSTRAINT MASTER DOF AFTER REDUCTION   =           3                        
+                                                                                
+                                                                                
+ E Q U A T I O N   S O L U T I O N                                      08:50:50
+                                                                                
+ TOTAL NUMBER OF EQUILIBRIUM EQUATIONS     =          15                        
+ APPROXIMATE "EFFECTIVE" BAND WIDTH        =           8                        
+                                                                                
+ NUMBER OF EQUATION STORAGE BLOCKS         =           1                        
+ MAXIMUM BLOCK SIZE (8-BYTE TERMS)         =         111                        
+ SIZE OF STIFFNESS FILE(S) (BYTES)         =         964 B                      
+                                                                                
+ NUMBER OF EQUATIONS TO SOLVE              =          15                        
+ NUMBER OF STATIC LOAD CASES               =           3                        
+ NUMBER OF ACCELERATION LOADS              =           6                        
+ NUMBER OF NONLINEAR DEFORMATION LOADS     =           0                        
+                                                                                
+                                                                                
+ E I G E N   A N A L Y S I S                                            08:50:51
+                                                                                
+ NUMBER OF STIFFNESS DEGREES OF FREEDOM    =          15                        
+ NUMBER OF MASS DEGREES OF FREEDOM         =           3                        
+ NUMBER OF EIGEN MODES SOUGHT              =          12                        
+ NUMBER OF RESIDUAL-MASS MODES SOUGHT      =           0                        
+ NUMBER OF SUBSPACE VECTORS USED           =           3                        
+                                                                                
+ RELATIVE CONVERGENCE TOLERANCE            =    1.00E-07                        
+ FREQUENCY SHIFT  (CENTER) (CYC/TIME)      =     .000000                        
+ FREQUENCY CUTOFF (RADIUS) (CYC/TIME)      =     .000000                        
+                                                                                
+ * * * W A R N I N G * * *                                                      
+ NUMBER OF MODES SOUGHT REDUCED TO THE NUMBER OF MASS DEGREES OF FREEDOM        
+                                                                                
+
+ Found mode       1 of       3, Eigenvalue = 3.4770924E+02, Period =    0.336955
+ Found mode       2 of       3, Eigenvalue = 6.0730401E+02, Period =    0.254963
+ Found mode       3 of       3, Eigenvalue = 6.6564125E+02, Period =    0.243534
+                                                                                
+ NUMBER OF EIGEN MODES FOUND               =           3                        
+ NUMBER OF ITERATIONS PERFORMED            =           1                        
+                                                                                
+                                                                                
+ J O I N T   O U T P U T                                                08:50:51
+                                                                                
+                                                                                
+ E L E M E N T   J O I N T - F O R C E   O U T P U T                    08:50:51
+
+                                                                                
++Joint  element       0 of       6                                              
++Joint  element       6 of       6                                              
++NUMBER OF JOINT  ELEMENTS SAVED           =           6                        
+                                                                                
++Frame  element       0 of       8                                              
++Frame  element       8 of       8                                              
++NUMBER OF FRAME  ELEMENTS SAVED           =           8                        
+                                                                                
+                                                                                
+ E L E M E N T   O U T P U T                                            08:50:51
+
+                                                                                
+                                                                                
+ A N A L Y S I S   C O M P L E T E                          2024/04/05  08:50:51
+                                                                                
+                                                                                
+ C E N T E R S   O F   R I G I D I T Y                                  08:50:51
+                                                                                
+ NUMBER OF LOAD CASES TO SOLVE             =           3                        

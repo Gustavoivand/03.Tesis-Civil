@@ -73,3 +73,4 @@ predicted_Dev<-model_results$net.result
 cor(predicted_Dev, data_test$D)
 dev.off()
 plot(predicted_Dev, data_test$D)
+
